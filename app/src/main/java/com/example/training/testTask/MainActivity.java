@@ -1,4 +1,4 @@
-package com.example.training;
+package com.example.training.testTask;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
+
+import com.example.training.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

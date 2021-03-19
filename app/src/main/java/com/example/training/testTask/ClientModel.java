@@ -1,4 +1,4 @@
-package com.example.training;
+package com.example.training.testTask;
 
 import android.os.Parcel;
 import android.os.Parcelable;
