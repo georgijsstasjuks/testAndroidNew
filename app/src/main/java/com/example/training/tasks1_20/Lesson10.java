@@ -9,36 +9,32 @@ import android.widget.TextView;
 
 import com.example.training.R;
 
-public class Lesson9 extends AppCompatActivity {
+public class Lesson10 extends AppCompatActivity implements View.OnClickListener {
 
     private TextView mTvOut;
     private Button mBtnOk;
     private Button mBtnCancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson9);
-
+        setContentView(R.layout.activity_lesson10);
         mTvOut = (TextView) findViewById(R.id.tvOut);
         mBtnOk = (Button) findViewById(R.id.btnOk);
         mBtnCancel = (Button) findViewById(R.id.btnCancel);
-        View.OnClickListener oclBtnOk = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mBtnOk.setOnClickListener(this);
+        mBtnCancel.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnOk:
                 mTvOut.setText("Нажата кнопка ОК");
-            }
-        };
-        mBtnOk.setOnClickListener(oclBtnOk);
-
-        View.OnClickListener oclBtnCancel = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
+                break;
+            case R.id.btnCancel:
                 mTvOut.setText("Нажата кнопка Cancel");
-            }
-        };
-
-        mBtnCancel.setOnClickListener(oclBtnCancel);
-
+                break;
+        }
     }
 }

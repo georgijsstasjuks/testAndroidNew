@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
 
     @Test
-    public void javaTest(){
+    public void javaTest() {
         int first = 5;
         int second = 10;
 
@@ -24,18 +24,18 @@ public class ExampleUnitTest {
 
 }
 
-class mathTest{
+class mathTest {
 
-    private int firstNumber;
-    private int secondNumber;
+    private int mFirstNumber;
+    private int mSecondNumber;
 
-    public mathTest(int firstNumber, int secondNumber){
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
+    public mathTest(int firstNumber, int secondNumber) {
+        this.mFirstNumber = firstNumber;
+        this.mSecondNumber = secondNumber;
     }
 
-    public int sum(){
-        return firstNumber + secondNumber;
+    public int sum() {
+        return mFirstNumber + mSecondNumber;
     }
 
 }

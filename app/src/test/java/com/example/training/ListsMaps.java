@@ -12,7 +12,7 @@ import java.util.Set;
 public class ListsMaps {
 
     @Test
-    public void list(){
+    public void list() {
         List<String> list=new ArrayList<String>();
         list.add("a");
         list.add("b");
@@ -22,15 +22,15 @@ public class ListsMaps {
         list.add("g");
         list.add("h");
 
-        for(int i = 0; i < list.size(); i++){
+        for(int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
         }
 
-        for(int i = 0; i < list.size(); i++){
-           if( i % 2 == 0)list.remove(i);
-       }
+        for(int i = 0; i < list.size(); i++) {
+           if( i % 2 == 0) list.remove(i);
+        }
         System.out.println();
-        for(int i = 0; i < list.size(); i++){
+        for(int i = 0; i < list.size(); i++) {
             System.out.print(list.get(i));
         }
         System.out.println();
@@ -40,19 +40,18 @@ public class ListsMaps {
     }
 
     @Test
-    public void map(){
-        Map<String, Integer> clients = new HashMap<String, Integer>();
-        clients.put("John",20);
-        clients.put("Bob",50);
-        clients.put("Donald",70);
+    public void map() {
+        Map<String, Integer> clients = new HashMap<>();
+        clients.put("John", 20);
+        clients.put("Bob", 50);
+        clients.put("Donald", 70);
 
         System.out.println(clients.get("John"));
-        for(Map.Entry<String, Integer> item : clients.entrySet()){
-
+        for (Map.Entry<String, Integer> item : clients.entrySet()) {
             System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
         }
 
-        clients.replace("John",77);
+        clients.replace("John", 77);
         clients.remove("Bob");
 
         System.out.println();

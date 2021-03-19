@@ -2,12 +2,12 @@ package com.example.training;
 import org.junit.Test;
 
 
-public class Book implements Printable{
+public class Book implements Printable {
 
     private String mTitle;
     private String mAuthor;
 
-    public Book(){
+    public Book() {
         mTitle = "Random title";
         mAuthor = "Random author";
     }
