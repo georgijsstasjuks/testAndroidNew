@@ -26,10 +26,8 @@ public class Lesson15 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson15);
-
         mTvColor = (TextView) findViewById(R.id.tvColor);
         mTvSize = (TextView) findViewById(R.id.tvSize);
-
         registerForContextMenu(mTvColor);
         registerForContextMenu(mTvSize);
     }
@@ -52,9 +50,7 @@ public class Lesson15 extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
         switch (item.getItemId()) {
-            // пункты меню для tvColor
             case MENU_COLOR_RED:
                 mTvColor.setTextColor(Color.RED);
                 mTvColor.setText("Text color = red");
