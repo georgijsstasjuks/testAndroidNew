@@ -9,6 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
+        <activity android:name=".task25_32.ActivityDateEx" android:label="Date extended">
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showdate"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".task25_32.ActivityDate" android:label="Date basic">
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showdate" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".task25_32.ActivityTime">
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showtime" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".task25_32.Lesson26">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".tasks1_20.Lesson20">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
