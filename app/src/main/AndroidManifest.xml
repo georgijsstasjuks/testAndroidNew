@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".second.ViewActivity"></activity>
+        <activity android:name=".second.NameActivity"></activity>
+        <activity android:name=".second.ActivityResult">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".second.ViewActivity" />
         <activity android:name=".second.IntentExtras">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
