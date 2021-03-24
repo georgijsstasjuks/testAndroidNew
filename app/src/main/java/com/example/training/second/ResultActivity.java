@@ -11,19 +11,19 @@ import android.widget.TextView;
 
 import com.example.training.R;
 
-public class ActivityResult extends AppCompatActivity implements View.OnClickListener {
+public class ResultActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tvName;
-    Button btnName;
+    TextView mTvName;
+    Button mBtnName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        tvName = (TextView) findViewById(R.id.tvName);
-        btnName = (Button) findViewById(R.id.btnName);
-        btnName.setOnClickListener(this);
+        mTvName = (TextView) findViewById(R.id.tvName);
+        mBtnName = (Button) findViewById(R.id.btnName);
+        mBtnName.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +36,6 @@ public class ActivityResult extends AppCompatActivity implements View.OnClickLis
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         String name = data.getStringExtra("name");
-        tvName.setText("Your name is " + name);
+        mTvName.setText("Your name is " + name);
     }
 }

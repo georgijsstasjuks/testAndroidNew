@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.training.R;
 
-public class RequestResultCode extends AppCompatActivity implements View.OnClickListener {
+public class RequestResultCodeActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView mTvText;
     Button mBtnColor;

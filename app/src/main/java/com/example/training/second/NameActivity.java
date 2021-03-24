@@ -12,22 +12,22 @@ import com.example.training.R;
 
 public class NameActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etName;
-    Button btnOK;
+    EditText mEtName;
+    Button mBtnOK;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_name);
 
-        etName = (EditText) findViewById(R.id.etName);
-        btnOK = (Button) findViewById(R.id.btnOK);
-        btnOK.setOnClickListener(this);
+        mEtName = (EditText) findViewById(R.id.etName);
+        mBtnOK = (Button) findViewById(R.id.btnOK);
+        mBtnOK.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
-        intent.putExtra("name", etName.getText().toString());
+        intent.putExtra("name", mEtName.getText().toString());
         setResult(RESULT_OK, intent);
         finish();
     }

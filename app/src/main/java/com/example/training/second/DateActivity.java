@@ -10,7 +10,7 @@ import com.example.training.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ActivityDate extends AppCompatActivity {
+public class DateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

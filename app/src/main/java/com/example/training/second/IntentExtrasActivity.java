@@ -10,11 +10,11 @@ import android.widget.EditText;
 
 import com.example.training.R;
 
-public class IntentExtras extends AppCompatActivity implements View.OnClickListener {
+public class IntentExtrasActivity extends AppCompatActivity implements View.OnClickListener {
 
     EditText mEtFName;
     EditText mEtLName;
-    Button btnSubmit;
+    Button mBtnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class IntentExtras extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_intent_extras);
         mEtFName = (EditText) findViewById(R.id.etFName);
         mEtLName = (EditText) findViewById(R.id.etLName);
-        btnSubmit = (Button) findViewById(R.id.btnSubmit);
-        btnSubmit.setOnClickListener(this);
+        mBtnSubmit = (Button) findViewById(R.id.btnSubmit);
+        mBtnSubmit.setOnClickListener(this);
     }
 
     @Override

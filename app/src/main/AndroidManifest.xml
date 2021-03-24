@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".second.AlignActivity"></activity>
+        <activity android:name=".second.UriIntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".second.AlignActivity" />
         <activity android:name=".second.ColorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.RequestResultCode">
+        <activity android:name=".second.RequestResultCodeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".second.NameActivity" />
-        <activity android:name=".second.ActivityResult">
+        <activity android:name=".second.ResultActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".second.ViewActivity" />
-        <activity android:name=".second.IntentExtras">
+        <activity android:name=".second.IntentExtrasActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,7 +59,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.GetIntentAction">
+        <activity android:name=".second.GetIntentActionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +67,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".second.ActivityDateEx"
+            android:name=".second.DateExActivity"
             android:label="Date extended">
             <intent-filter>
                 <action android:name="ru.startandroid.intent.action.showdate" />
@@ -69,7 +76,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".second.ActivityDate"
+            android:name=".second.DateActivity"
             android:label="Date basic">
             <intent-filter>
                 <action android:name="ru.startandroid.intent.action.showdate" />
@@ -77,14 +84,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.ActivityTime">
+        <activity android:name=".second.TimeActivity">
             <intent-filter>
                 <action android:name="ru.startandroid.intent.action.showtime" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".second.Lesson26">
+        <activity android:name=".second.IntentFilterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

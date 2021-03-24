@@ -10,16 +10,17 @@ import com.example.training.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ActivityTime extends AppCompatActivity {
+public class DateExActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.time);
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        String time = sdf.format(new Date(System.currentTimeMillis()));
+        setContentView(R.layout.date);
 
-        TextView tvTime = (TextView) findViewById(R.id.tvTime);
-        tvTime.setText(time);
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, yyyy");
+        String date = sdf.format(new Date(System.currentTimeMillis()));
+
+        TextView tvDate = (TextView) findViewById(R.id.tvDate);
+        tvDate.setText(date);
     }
 }

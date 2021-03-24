@@ -23,7 +23,6 @@ public class InfoActivity extends AppCompatActivity {
 
         String format = "", textInfo = "";
 
-        // в зависимости от action заполняем переменные
         if (action.equals("ru.startandroid.intent.action.showtime")) {
             format = "HH:mm:ss";
             textInfo = "Time: ";
