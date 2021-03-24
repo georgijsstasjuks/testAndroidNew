@@ -9,7 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".second.NameActivity"></activity>
+        <activity android:name=".second.AlignActivity"></activity>
+        <activity android:name=".second.ColorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".second.RequestResultCode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".second.NameActivity" />
         <activity android:name=".second.ActivityResult">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
