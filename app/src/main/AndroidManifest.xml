@@ -10,12 +10,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".second.BrowserActivity" android:label="MyBrowser" tools:ignore = "AppLinkUrlError">
-                <intent-filter>
-                    <data android:scheme="http"/>
-                    <category android:name="android.intent.category.DEFAULT" />
-                    <action android:name="android.intent.action.VIEW"/>
-                </intent-filter>
+        <activity android:name=".third.SharedPreferencesActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".second.BrowserActivity"
+            android:label="MyBrowser"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter>
+                <data android:scheme="http" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
         </activity>
         <activity android:name=".second.SimpleBrowserActivity">
             <intent-filter>
