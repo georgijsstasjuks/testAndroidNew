@@ -1,4 +1,4 @@
-package com.example.training.task25_32;
+package com.example.training.second;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,12 +9,13 @@ import android.widget.Button;
 
 import com.example.training.R;
 
-public class Lesson26 extends AppCompatActivity implements View.OnClickListener {
+public class GetIntentAction extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lesson26);
+        setContentView(R.layout.activity_get_intent_action);
+
         Button btnTime = (Button) findViewById(R.id.btnTime);
         Button btnDate = (Button) findViewById(R.id.btnDate);
 

@@ -9,114 +9,138 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".task25_32.ActivityDateEx" android:label="Date extended">
+        <activity android:name=".second.InfoActivity">
             <intent-filter>
-                <action android:name="ru.startandroid.intent.action.showdate"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
+
+                <action android:name="showdate"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="showtime"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".task25_32.ActivityDate" android:label="Date basic">
+        <activity android:name=".second.GetIntentAction">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".second.ActivityDateEx"
+            android:label="Date extended">
             <intent-filter>
                 <action android:name="ru.startandroid.intent.action.showdate" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".task25_32.ActivityTime">
+        <activity
+            android:name=".second.ActivityDate"
+            android:label="Date basic">
+            <intent-filter>
+                <action android:name="ru.startandroid.intent.action.showdate" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".second.ActivityTime">
             <intent-filter>
                 <action android:name="ru.startandroid.intent.action.showtime" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".task25_32.Lesson26">
+        <activity android:name=".second.Lesson26">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson20">
+        <activity android:name=".first.Lesson20">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson19">
+        <activity android:name=".first.Lesson19">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson18">
+        <activity android:name=".first.Lesson18">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson17">
+        <activity android:name=".first.Lesson17">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson16">
+        <activity android:name=".first.Lesson16">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson15">
+        <activity android:name=".first.Lesson15">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson14">
+        <activity android:name=".first.Lesson14">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson13">
+        <activity android:name=".first.Lesson13">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson12">
+        <activity android:name=".first.Lesson12">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson11">
+        <activity android:name=".first.Lesson11">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson10" />
-        <activity android:name=".tasks1_20.Lesson9">
+        <activity android:name=".first.Lesson10" />
+        <activity android:name=".first.Lesson9">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tasks1_20.Lesson8" />
-        <activity android:name=".tasks1_20.Lesson7" />
-        <activity android:name=".tasks1_20.Lesson5">
+        <activity android:name=".first.Lesson8" />
+        <activity android:name=".first.Lesson7" />
+        <activity android:name=".first.Lesson5">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

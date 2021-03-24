@@ -1,4 +1,4 @@
-package com.example.training.tasks1_20;
+package com.example.training.first;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,6 @@ import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.example.training.R;
 
 public class Lesson16 extends AppCompatActivity {
 

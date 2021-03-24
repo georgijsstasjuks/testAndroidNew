@@ -1,4 +1,4 @@
-package com.example.training.task25_32;
+package com.example.training.second;
 
 import androidx.appcompat.app.AppCompatActivity;
 
