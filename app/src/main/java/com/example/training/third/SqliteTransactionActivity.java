@@ -12,7 +12,6 @@ import android.util.Log;
 
 public class SqliteTransactionActivity extends AppCompatActivity {
 
-
    private  final String LOG_TAG = "myLogs";
 
    private  DBHelper mDbh;
@@ -28,10 +27,11 @@ public class SqliteTransactionActivity extends AppCompatActivity {
 
     void myActions() {
         mDb = mDbh.getWritableDatabase();
-        delete(mDb, "mytable");
-        insert(mDb, "mytable", "val1");
-        read(mDb, "mytable");
-        mDbh.close();
+        SQLiteDatabase db2 = mDbh.getWritableDatabase();
+        Log.d(LOG_TAG, "db = db2 - " + mDb.equals(db2));
+        Log.d(LOG_TAG, "db open - " + mDb.isOpen() + ", db2 open - " + db2.isOpen());
+        db2.close();
+        Log.d(LOG_TAG, "db open - " + mDb.isOpen() + ", db2 open - " + db2.isOpen());
     }
 
     void insert(SQLiteDatabase db, String table, String value) {
