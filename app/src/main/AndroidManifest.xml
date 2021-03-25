@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
+        <activity android:name=".third.SqliteInnerJoinActivity"></activity>
         <activity android:name=".third.SqliteQueryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
