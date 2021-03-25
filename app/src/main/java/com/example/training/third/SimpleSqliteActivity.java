@@ -21,8 +21,8 @@ public class SimpleSqliteActivity extends AppCompatActivity  implements View.OnC
 
     final String LOG_TAG = "myLogs";
 
-    private Button mBtnAdd, mBtnRead, mBtnClear;
-    private EditText mEtName;
+    private Button mBtnAdd, mBtnRead, mBtnClear, mBtnUpd, mBtnDel;;
+    private EditText mEtName,  mEtID;
     private EditText mEtEmail;
 
     private DBHelper mDbHelper;
@@ -40,6 +40,7 @@ public class SimpleSqliteActivity extends AppCompatActivity  implements View.OnC
 
         String name = mEtName.getText().toString();
         String email = mEtEmail.getText().toString();
+        String id = mEtID.getText().toString();
 
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
@@ -79,6 +80,25 @@ public class SimpleSqliteActivity extends AppCompatActivity  implements View.OnC
                 int clearCount = db.delete("mytable", null, null);
                 Log.d(LOG_TAG, "deleted rows count = " + clearCount);
                 break;
+            case R.id.btnUpd:
+                if (id.equalsIgnoreCase("")) {
+                    break;
+                }
+                Log.d(LOG_TAG, "--- Update mytable: ---");
+                cv.put("name", name);
+                cv.put("email", email);
+                int updCount = db.update("mytable", cv, "id = ?",
+                        new String[] { id });
+                Log.d(LOG_TAG, "updated rows count = " + updCount);
+                break;
+            case R.id.btnDel:
+                if (id.equalsIgnoreCase("")) {
+                    break;
+                }
+                Log.d(LOG_TAG, "--- Delete from mytable: ---");
+                int delCount = db.delete("mytable", "id = " + id, null);
+                Log.d(LOG_TAG, "deleted rows count = " + delCount);
+                break;
         }
         mDbHelper.close();
     }
@@ -89,12 +109,17 @@ public class SimpleSqliteActivity extends AppCompatActivity  implements View.OnC
         mBtnClear = (Button) findViewById(R.id.btnClear);
         mEtName = (EditText) findViewById(R.id.etName);
         mEtEmail = (EditText) findViewById(R.id.etEmail);
+        mBtnUpd = (Button) findViewById(R.id.btnUpd);
+        mEtID = (EditText) findViewById(R.id.etID);
+        mBtnDel = (Button) findViewById(R.id.btnDel);
     }
 
     private void setupListeners() {
         mBtnAdd.setOnClickListener(this);
         mBtnRead.setOnClickListener(this);
         mBtnClear.setOnClickListener(this);
+        mBtnUpd.setOnClickListener(this);
+        mBtnDel.setOnClickListener(this);
     }
 
     class DBHelper extends SQLiteOpenHelper {
