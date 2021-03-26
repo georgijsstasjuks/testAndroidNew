@@ -17,25 +17,17 @@ public class SharedPreferencesActivity extends AppCompatActivity implements View
     private Button mBtnSave, mBtnLoad;
     private SharedPreferences mSpref;
 
-    final String SAVED_TEXT = "saved_text";
+    private final String SAVED_TEXT = "saved_text";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences_activity);
-
-        mEtText = (EditText) findViewById(R.id.etText);
-
-        mBtnSave = (Button) findViewById(R.id.btnSave);
-        mBtnSave.setOnClickListener(this);
-
-        mBtnLoad = (Button) findViewById(R.id.btnLoad);
-        mBtnLoad.setOnClickListener(this);
+        setupView();
+        setupListeners();
         loadText();
     }
 
-    @Override
-    public void onClick(View v) {
+    @Override public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnSave:
                 saveText();
@@ -48,10 +40,20 @@ public class SharedPreferencesActivity extends AppCompatActivity implements View
         }
     }
 
-    @Override
-    protected void onDestroy() {
+    @Override protected void onDestroy() {
         super.onDestroy();
         saveText();
+    }
+
+    private void setupView() {
+        mEtText = (EditText) findViewById(R.id.etText);
+        mBtnSave = (Button) findViewById(R.id.btnSave);
+        mBtnLoad = (Button) findViewById(R.id.btnLoad);
+    }
+
+    private void setupListeners() {
+        mBtnSave.setOnClickListener(this);
+        mBtnLoad.setOnClickListener(this);
     }
 
    private void saveText() {

@@ -65,7 +65,7 @@ public class SqliteInnerJoinActivity extends AppCompatActivity {
         dbh.close();
     }
 
-    void logCursor(Cursor c) {
+    private void logCursor(Cursor c) {
         if (c != null) {
             if (c.moveToFirst()) {
                 String str;

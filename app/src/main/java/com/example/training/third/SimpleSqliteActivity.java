@@ -19,7 +19,7 @@ import org.w3c.dom.Text;
 
 public class SimpleSqliteActivity extends AppCompatActivity  implements View.OnClickListener {
 
-    final String LOG_TAG = "myLogs";
+    private String LOG_TAG = "myLogs";
 
     private Button mBtnAdd, mBtnRead, mBtnClear, mBtnUpd, mBtnDel;;
     private EditText mEtName,  mEtID;

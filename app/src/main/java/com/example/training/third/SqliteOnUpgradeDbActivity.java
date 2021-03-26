@@ -16,6 +16,7 @@ public class SqliteOnUpgradeDbActivity extends AppCompatActivity {
 
     private final String DB_NAME = "staff";
     private final int DB_VERSION = 2;
+
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
