@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".third.SqliteTransactionActivity">
+        <activity android:name=".third.SqliteOnUpgradeDbActivity" android:exported="true">
+
+        </activity>
+        <activity android:name=".third.SqliteTransactionActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
