@@ -11,7 +11,7 @@ import android.widget.TimePicker;
 
 import com.example.training.R;
 
-public class TimePickerDialogActivity extends AppCompatActivity {
+public class TimePickerDialogActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final static int DIALOG_TIME = 1;
     private int myHour = 14;
@@ -22,10 +22,7 @@ public class TimePickerDialogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_picker_dialog);
         mTvTime = (TextView) findViewById(R.id.tvTime);
-    }
-
-    public void onclick(View view) {
-        showDialog(DIALOG_TIME);
+        mTvTime.setOnClickListener(this);
     }
 
     protected Dialog onCreateDialog(int id) {
@@ -44,5 +41,7 @@ public class TimePickerDialogActivity extends AppCompatActivity {
         }
     };
 
-
+    @Override public void onClick(View v) {
+        showDialog(DIALOG_TIME);
+    }
 }

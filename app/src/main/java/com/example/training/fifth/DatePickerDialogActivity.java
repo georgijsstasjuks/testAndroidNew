@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.training.R;
 
-public class DatePickerDialogActivity extends AppCompatActivity {
+public class DatePickerDialogActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int DIALOG_DATE = 1;
     private int mMyYear = 2021;
@@ -23,10 +23,7 @@ public class DatePickerDialogActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_date_picker_dialog);
         mTvDate = (TextView) findViewById(R.id.tvDate);
-    }
-
-    public void onclick(View view) {
-        showDialog(DIALOG_DATE);
+        mTvDate.setOnClickListener(this);
     }
 
     protected Dialog onCreateDialog(int id) {
@@ -48,4 +45,7 @@ public class DatePickerDialogActivity extends AppCompatActivity {
         }
     };
 
+    @Override public void onClick(View v) {
+        showDialog(DIALOG_DATE);
+    }
 }

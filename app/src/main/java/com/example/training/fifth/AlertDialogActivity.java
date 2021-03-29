@@ -7,21 +7,21 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.training.R;
 
-public class AlertDialogActivity extends AppCompatActivity {
+public class AlertDialogActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final int DIALOG_EXIT = 1;
+    private Button mBtnExit;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alert_dialog);
-    }
-
-    public void onclick(View v) {
-        showDialog(DIALOG_EXIT);
+        mBtnExit = (Button) findViewById(R.id.btnExit);
+        mBtnExit.setOnClickListener(this);
     }
 
     protected Dialog onCreateDialog(int id) {
@@ -38,19 +38,17 @@ public class AlertDialogActivity extends AppCompatActivity {
         return super.onCreateDialog(id);
     }
 
-    DialogInterface.OnClickListener myClickListener = new DialogInterface.OnClickListener() {
-        public void onClick(DialogInterface dialog, int which) {
-            switch (which) {
-                case Dialog.BUTTON_POSITIVE:
-                    saveData();
-                    finish();
-                    break;
-                case Dialog.BUTTON_NEGATIVE:
-                    finish();
-                    break;
-                case Dialog.BUTTON_NEUTRAL:
-                    break;
-            }
+    DialogInterface.OnClickListener myClickListener = (dialog, which) -> {
+        switch (which) {
+            case Dialog.BUTTON_POSITIVE:
+                saveData();
+                finish();
+                break;
+            case Dialog.BUTTON_NEGATIVE:
+                finish();
+                break;
+            case Dialog.BUTTON_NEUTRAL:
+                break;
         }
     };
 
@@ -58,4 +56,7 @@ public class AlertDialogActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show();
     }
 
+    @Override public void onClick(View v) {
+        showDialog(DIALOG_EXIT);
+    }
 }
