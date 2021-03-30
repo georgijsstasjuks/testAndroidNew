@@ -62,4 +62,8 @@
     <string name="items">Items</string>
     <string name="adapter">Adapter</string>
     <string name="cursor">Cursor</string>
+    <string name="main">MainActivity</string>
+    <string name="second">SecondActivity</string>
+    <string name="send">Send</string>
+
 </resources>
