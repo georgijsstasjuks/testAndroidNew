@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.training.R
 import com.example.training.kotlin.userlist.model.User
-import kotlinx.android.synthetic.main.todo_item_layout.view.*
+import kotlinx.android.synthetic.main.user_item_layout.view.*
 
 class RecyclerAdapter(private val userList: List<User>): RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
