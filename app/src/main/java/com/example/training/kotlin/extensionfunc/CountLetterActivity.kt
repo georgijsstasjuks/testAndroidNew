@@ -13,7 +13,7 @@ class CountLetterActivity : AppCompatActivity() {
         setupListeners()
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         btSendInt.setOnClickListener {
             val number = etInt.text.toString()
             tvAnswer.text = number.toInt().square().toString()
@@ -26,7 +26,7 @@ class CountLetterActivity : AppCompatActivity() {
         }
     }
 
-    fun String.countLetter(c: CharArray) : Int{
+    private fun String.countLetter(c: CharArray) : Int{
         var count = 0
         for (n in 0 until this.count()) {
             if(this[n].toLowerCase() == c[0].toLowerCase()) count++
@@ -34,6 +34,6 @@ class CountLetterActivity : AppCompatActivity() {
         return count
     }
 
-    fun Int.square(): Int { return this * this }
+    private fun Int.square(): Int { return this * this }
 
 }

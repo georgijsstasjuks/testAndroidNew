@@ -9,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_when_check.*
 class WhenCheckActivity : AppCompatActivity() {
     lateinit var number: String
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_when_check)

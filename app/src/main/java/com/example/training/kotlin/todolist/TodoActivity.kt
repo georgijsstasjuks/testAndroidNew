@@ -19,13 +19,13 @@ class TodoActivity : AppCompatActivity() {
         setupListeners()
     }
 
-    fun setupAdapter() {
+    private fun setupAdapter() {
         todoAdapter = TodoAdapter(mutableListOf())
         rvTodo.adapter = todoAdapter
         rvTodo.layoutManager = LinearLayoutManager(this)
     }
 
-    fun setupListeners() {
+    private fun setupListeners() {
         btAdd.setOnClickListener {
             val title = etTodoTitle.text.toString()
             if (title.isNotEmpty()) {
